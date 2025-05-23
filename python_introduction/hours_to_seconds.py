@@ -5,7 +5,8 @@
 
 hours = 2 # asigning  an hour of 2
 seconds = 60 * 60 # calculating the amount of seconds in an hour
+seconds = hours * 3600
 
-seconds_in_two_hours = seconds * 2 # calculating seconds in  2 hours
+seconds_in_two_hours = seconds  # calculating seconds in  2 hours
 
 print( hours, "hour(s) is",  seconds_in_two_hours, "seconds")
