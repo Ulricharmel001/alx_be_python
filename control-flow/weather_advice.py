@@ -29,13 +29,13 @@
 #  display the recommended clothing
 
 # """
-user_current_weather_condition = input("What's the weather like today? (sunny/rainy/cold): ").lower()
-print(user_current_weather_condition)
-if user_current_weather_condition == "sunny":
+weather = input("What's the weather like today? (sunny/rainy/cold): ").lower()
+# print(user_current_weather_condition)
+if weather == "sunny":
     print(" wear a t-shirt and sunglasses ")
-elif user_current_weather_condition == "rainy":
+elif weather == "rainy":
     print("don't forget your umbrella and raincoat")
-elif user_current_weather_condition == "cold":
+elif weather == "cold":
     print("Make sure to wear a warm coat and a scarf.")
 else:
     print("Sorry, I don't have recommendations for this weather")
