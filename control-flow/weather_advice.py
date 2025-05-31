@@ -29,8 +29,8 @@ else
  display the recommended clothing
 
 """
-user_current_weather_condition = input("\nWhat's the weather like today? (sunny/rainy/cold):  ").lower()
-print(user_current_weather_condition)
+user_current_weather_condition = input("\nWhat's the weather like today? (sunny/rainy/cold):\n")
+# print(user_current_weather_condition)
 if user_current_weather_condition == "sunny":
     print(" wear a t-shirt and sunglasses ")
 elif user_current_weather_condition == "rainy":
