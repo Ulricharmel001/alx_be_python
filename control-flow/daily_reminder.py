@@ -41,11 +41,15 @@ time_bounce = input("Is it time-bound? (yes/no):").lower()
 
 # Step 2: Match Case on priority
 match priority:
+
     case "high":
-        print(f" '{task}' is a high priority task that requires immediate attention today!")
+        if time_bounce == "yes":
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
+
+        print(f" '{task}' is a high priority task!")
 
     case "medium":
-        print(f"Reminder: '{task}' is a medium priority task. You can work on this later since it is not highly prioritized.")
+        print(f"Reminder: '{task}' is a medium priority task. ")
     case "low":
         print(f"Reminder: '{task}' is a low priority task. You can do this in your free time.")
 
