@@ -52,6 +52,7 @@ match priority:
 
 # if time_bounce == "no":
 #     print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
+
 if time_bounce == "yes":
     print(f"Reminder: {task} is a high priority task that requires immediate attention today!")
 
