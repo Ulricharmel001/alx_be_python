@@ -15,10 +15,10 @@ def perform_operation(num1, num2, operation):
             if num2  == 0:
                 result = "Cannot divide by zero."
                 return result
+            result = num1 / num2
+            return result
 
-            else:
-                result = num1 / num2
-                return result
+
 
 
 
