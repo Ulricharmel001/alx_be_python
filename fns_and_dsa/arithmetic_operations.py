@@ -13,8 +13,9 @@ def perform_operation(num1, num2, operation):
             return result
         case "divide":
             if num2  == 0:
-                return "cannot divide by zero"
-                print("Cannot divide by zero.")
+                result = "Cannot divide by zero."
+                return result
+
             else:
                 result = num1 / num2
                 return result
