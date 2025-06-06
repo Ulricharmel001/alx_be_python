@@ -11,7 +11,11 @@ def main():
         display_menu()
         choice = input("Enter your choice: ")
 
-        if choice == '1':
+        if choice == "0":
+            print("Enter valid choice 1, 2 , 3 or 4")
+            pass
+
+        elif choice == '1':
             # Prompt for and add an item
             item = input("Enter item name: ")
             shopping_list.append(item)
