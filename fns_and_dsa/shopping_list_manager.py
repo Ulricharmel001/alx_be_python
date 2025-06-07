@@ -20,11 +20,8 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        try:
-            choice = int(input("Enter your choice: "))
-        except ValueError:
-            print("Invalid input. Please enter a number between 1 and 4.")
-            continue
+
+        choice = int(input("Enter your choice: "))
 
 
         if choice == 1:
@@ -38,7 +35,7 @@ def main():
             item = input("Enter item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"{item} removed successfully.4")
+                print(f"{item} removed successfully! ")
 
 
             pass
