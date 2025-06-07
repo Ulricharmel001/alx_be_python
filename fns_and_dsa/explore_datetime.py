@@ -17,10 +17,13 @@ and return the current date and time
 def display_current_datetime(current_date):
     from datetime import datetime
     current_date  = datetime.now() # current date and time == datetime.now(), this line of code display current date and time and store in a variable called current_date
+    print(current_date)
     return current_date
 
-display_current_datetime("friday") # call the function
-print(display_current_datetime("friday")) # print the current time and date
+
+
+result = display_current_datetime(datetime.now())
+print(f"Current date and time: {result}")
 
 
 """"
@@ -38,12 +41,12 @@ def calculate_future_date(number_of_days):
     today = datetime.today()
     future_date = today + timedelta(days=number_of_days)
     return future_date
-
+2
 # Get input from user outside the function
 try:
-    days = int(input("Enter the number of days to add: "))
+    days = int(input("Enter the number of days to add to the current date: "))
     future = calculate_future_date(days)
-    print("Future:", future.strftime("%Y-%m-%d"))
+    print("Future date:", future.strftime("%Y-%m-%d"))
 except ValueError:
     print("Invalid input. Please enter a valid number.")
 
