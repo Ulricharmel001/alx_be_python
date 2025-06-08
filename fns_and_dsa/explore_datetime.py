@@ -2,55 +2,45 @@ import datetime
 from datetime import datetime
 from datetime import timedelta
 
-
-
-""""
-understanding datetime module in python
-Creating Function to print out current date and time
-create a function name "display_current_datetime"
-past a parameter known as current_date
-create a variable called "current_datetime"
-and return the current date and time
-
-"""
-
-def display_current_datetime(current_date):
-    from datetime import datetime
-    current_date  = datetime.now() # current date and time == datetime.now(), this line of code display current date and time and store in a variable called current_date
-    print(current_date)
-    return current_date
-
-
-
-result = display_current_datetime(datetime.now())
-print(f"Current date and time: {result}")
-
-
-""""
-Function to calculate future_date
-
-
-"""
-
-
-
+#
+#
+# """"
+# understanding datetime module in python
+# Creating Function to print out current date and time
+# create a function name "display_current_datetime"
+# past a parameter known as current_date
+# create a variable called "current_datetime"
+# and return the current date and time
+#
+# """""
 
 from datetime import datetime, timedelta
 
+# Part 1: Display current date and time
+def display_current_datetime():
+    current_date = datetime.now()
+    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+    print(f"Current date and time: {formatted_date}")
+    return current_date
+
+# Part 2: Calculate future date
 def calculate_future_date(number_of_days):
     today = datetime.today()
     future_date = today + timedelta(days=number_of_days)
     return future_date
-2
-# Get input from user outside the function
-try:
-    days = int(input("Enter the number of days to add to the current date: "))
-    future = calculate_future_date(days)
-    print("Future date:", future.strftime("%Y-%m-%d"))
-except ValueError:
-    print("Invalid input. Please enter a valid number.")
 
+# Main Program Execution
+if __name__ == "__main__":
+    # Display current datetime
+    display_current_datetime()
 
+    # Prompt user for input and calculate future date
+    try:
+        days = int(input("Enter the number of days to add to the current date: "))
+        future = calculate_future_date(days)
+        print("Future date:", future.strftime("%Y-%m-%d"))
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
 
 
 
