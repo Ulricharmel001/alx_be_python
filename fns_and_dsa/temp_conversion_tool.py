@@ -1,24 +1,15 @@
-"""
-creating a script that converts temperatures between Celsius and Fahrenheit,
-using global variables to store conversion factors.
-Write a function convert_to_celsius(fahrenheit) that takes a temperature in Fahrenheit and returns the temperature converted to Celsius.
-Write a function convert_to_fahrenheit(celsius) that takes a temperature in Celsius and returns the temperature converted to Fahrenheit.
-Inside each function, use the respective global conversion factor to perform the conversion.
-"""
-
-
 
 # Global conversion factors
-F = ( 5 / 9)
-C  = (9 / 5)
+FAHRENHEIT_TO_CELSIUS_FACTOR = ( 5 / 9)
+CELSIUS_TO_FAHRENHEIT_FACTOR = (9 / 5)
 
 # Convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * F
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 # Convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
-    return (celsius * C) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 # Main logic
 if __name__ == "__main__":
