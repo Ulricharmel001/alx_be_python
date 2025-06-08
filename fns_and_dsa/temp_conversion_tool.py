@@ -9,16 +9,16 @@ Inside each function, use the respective global conversion factor to perform the
 
 
 # Global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR =( 5 / 9)
-CELSIUS_TO_FAHRENHEIT_FACTOR = (9 / 5)
+F = ( 5 / 9)
+C  = (9 / 5)
 
 # Convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    return (fahrenheit - 32) * F
 
 # Convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+    return (celsius * C) + 32
 
 # Main logic
 if __name__ == "__main__":
