@@ -20,15 +20,18 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-
-        choice = int(input("Enter your choice: "))
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+            continue
 
 
         if choice == 1:
             # Prompt for and add an item
-            item = input("Enter item name: ")
+            item = input("Enter the item to add: ")
             shopping_list.append(item)
-            print(f"{item} added to shopping list.")
+            print(f"{item} Added to shopping list successfully.")
             pass
         elif choice == 2:
             # Prompt for and remove an item
