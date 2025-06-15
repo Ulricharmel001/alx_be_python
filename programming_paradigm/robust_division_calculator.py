@@ -29,7 +29,7 @@ def safe_divide(numerator, denominator):
         return num / denom
 
     except ValueError:
-        return "Error: Invalid number input."
+        return f"Error: Please enter numeric values only."
 
 
 
