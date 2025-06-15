@@ -1,27 +1,22 @@
-# Bank Account  class
-#Initialising my Bank account with amount
 class BankAccount:
-    def __init__(self, initial_balance):
-        # Initialize account with a starting balance
-        self.account_balance = initial_balance
+    """A simple bank account class with basic operations."""
+
+    def __init__(self, initial_balance=0):
+        """Initialize the bank account with an optional initial balance."""
+        self.__account_balance = initial_balance  # Encapsulated balance
 
     def deposit(self, amount):
-        # Add the deposit amount to the balance
-        self.account_balance += amount
-        return self.account_balance
+        """Deposit the specified amount into the account."""
+        if amount > 0:
+            self.__account_balance += amount
 
     def withdraw(self, amount):
-        # Only withdraw if there is enough balance
-        if amount <= self.account_balance:
-            self.account_balance -= amount
-            print("Withdraw successful")
+        """Withdraw the specified amount if funds are sufficient."""
+        if 0 < amount <= self.__account_balance:
+            self.__account_balance -= amount
             return True
-        else:
-            print(f"Insufficient funds to withdraw ${amount}")
-            return False
+        return False
 
     def display_balance(self):
-        # Print the current account balance
-        print(f"Current balance: ${self.account_balance}")
-
-#
+        """Display the current account balance."""
+        print(f"Current Balance: ${self.__account_balance:.2f}")
