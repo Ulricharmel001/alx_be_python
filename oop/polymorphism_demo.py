@@ -1,4 +1,5 @@
 # polymorphism_demo.py
+# learning how polymorpphism work
 
 import math
 
